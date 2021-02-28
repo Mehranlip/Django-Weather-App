@@ -1,0 +1,16 @@
+{% if city_weather %}
+<h1>Today:</h1>
+<br>
+<h4>city: {{ city_weather.city }}</h4>
+<br>
+<h4>temperature: {{ city_weather.temperature }} K°</h4>
+<br>
+<h4>description: {{ city_weather.description }}</h4>
+<br>
+image: <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="image"></img>
+{% else %}
+Please enter city in url. For Example:
+<br>
+<br>
+localhost:8000/?city=Paris
+{% endif %}
