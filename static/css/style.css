@@ -1,0 +1,289 @@
+/* create by Mehranlip  */
+/* import icone cloud and sass compass whit search box */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;600&display=swap');
+@import "compass/css3";
+
+/* backgroun image for body */
+body{
+    background-image: url("/static/image/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* style titel site */
+h1{
+  display: inline;
+  color: #ffffff;
+  font-family:'Nunito', sans-serif ;
+  text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+/* style for flox box button week and today */
+.flex-container {
+  margin-top: 100px;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+}
+/* fix bug for button */
+#week{
+  margin-left: 50px;
+  
+}
+/* style button in main ( week and today) */
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #e5f1f0;
+    background: linear-gradient(90deg, rgb(222, 243, 240) 0%, rgb(222, 231, 230) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px#d9f3ee);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    opacity: 85%;
+    filter: blur(50%);
+	-webkit-filter: blur(50%);
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #d9f3ee;
+    box-shadow: 0 0 60px #d9f3ee);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity:50%;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #e0f0ed;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+/* --------style search box-------- */
+.sr{
+  margin-top: 200px;
+}
+form{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+  
+}
+
+input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.fa{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+form:hover{
+  width: 200px;
+  cursor: pointer;
+}
+
+form:hover input{
+  display: block;
+}
+
+form:hover .fa{
+  background: #07051a;
+  color: white;
+}
+
+/* --------- weather-box-style ----------- */
+
+.info{
+  margin-top: 100px;
+}
+.bg{
+	background-image: url("images/bg.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(20px);
+	-webkit-filter: blur(20px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.container{
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget{
+	width: 400px;
+	height: 200px;
+	border-radius: 20px;
+	background: rgba(299, 299, 299, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget .left{
+	position: absolute;
+	left: 0;
+	width: 200px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget .right{
+	position: absolute;
+	right: 0;
+	width: 200px;
+	color: #fff;
+	margin: 50px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.icon{
+	width: 75%;
+	margin-bottom: -30px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.weather-status{
+	color: #fff;
+	text-align: center;
+	margin-top: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget .right .city{
+	font-size: 1em;
+	text-align: center;
+	margin: 0;
+	text-shadow: 1px 1px 5px #707070;
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget .right .degree{
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	text-shadow: 1px 1px 5px #707070;
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget .bottom{
+	width: 100%;
+	position: absolute;
+	bottom: 10px;
+	display: flex;
+	justify-content: center;
+	color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.widget .bottom div{
+	margin: 5px 10px 5px 10px;
+	text-align: center;
+	line-height: 100%;
+	font-size: 0.83em;
+	text-shadow: 1px 1px 5px #707070;
+  font-family: 'Poppins', sans-serif;
+}
+
+.bottom div span{
+	display: block;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* the End */

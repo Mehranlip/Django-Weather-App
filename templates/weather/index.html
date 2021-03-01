@@ -1,16 +1,74 @@
-{% if city_weather %}
-<h1>Today:</h1>
-<br>
-<h4>city: {{ city_weather.city }}</h4>
-<br>
-<h4>temperature: {{ city_weather.temperature }} K°</h4>
-<br>
-<h4>description: {{ city_weather.description }}</h4>
-<br>
-image: <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="image"></img>
-{% else %}
-Please enter city in url. For Example:
-<br>
-<br>
-localhost:8000/?city=Paris
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    
+</head>
+<body>
+	<!-- title site -->
+    <div class="name">
+        <h1>
+            ALFAweather
+        </h1> 
+    </div>
+   <!-- button week today -->
+<div class="flex-container">
+
+    <div class="wrap" id="today">
+        <button class="button">Today</button>
+    </div>
+    
+
+    <div class="wrap" id="week">
+        <button class="button">Week</button>
+    </div>
+
+</div>
+<p>
+    
+</p>
+<div class="info">
+    <div class="bg"></div>
+
+	<div class="container">
+		<!-- Weather Widget -->
+		<div class="widget">
+			<div class="left">
+				<img src="/static/image/wheathericon.png" class="icon">
+				<h5 class="weather-status"></h5>
+			</div>
+			<div class="right">
+				<h5 class="city">Arak</h5>
+				<h5 class="degree">25&#176;c</h5>
+			</div>
+			<div class="bottom">
+				<div>
+					Wind Speed <span>22 kmph</span>
+				</div>
+				<div>
+					Cloud Cover <span>22%</span>
+				</div>
+				<div>
+					Pressure <span>1010 mb</span>
+				</div>
+			</div>
+		</div>
+
+</div>
+<!-- search box -->
+<div class="sr">   
+    <form action="">
+        <input type="search" placeholder="Loction , Arak">
+        <i class="fa fa-search"></i>
+      </form>
+    
+
+</div>
+</body>
+</html>
